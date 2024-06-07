@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Oracle Analytics Server - Meet The Experts",
+  "workshoptitle": "Oracle Analytics Server Workshop",
   "help": "eric.vinck@oracle.com",
   "tutorials": [
     {
@@ -8,17 +8,17 @@
       "filename": "intro.md"
     },
     {
-      "title": "Atelier 1: Self-Service Data Visualization",
+      "title": "Workshop 1: Self-Service Data Visualization",
       "description": "Atelier1",
       "filename": "Atelier1/atelier1.md"
     },
     {
-      "title": "Atelier 2: Préparation des données en libre-service, enrichissement et modélisation des données",
+      "title": "Workshop 2: Self-service data preparation, data enrichment and modeling",
       "description": "Atelier2",
       "filename": "Atelier2/atelier2.md"
     },   
     {
-      "title": "Atelier 3: Analytics augmentée à l aide du Machine Learning",
+      "title": "Workshop 3: # Augmented analysis using Machine Learning",
       "description": "Atelier3",
       "filename": "Atelier3/atelier3.md"
     }
