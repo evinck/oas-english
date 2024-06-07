@@ -1,325 +1,325 @@
-# Préparation des données en libre-service, enrichissement et modélisation des données
+# Self-service data preparation, data enrichment and modeling
 
 ## Introduction
 
-Les analystes et les administrateurs de bases de données passent beaucoup de temps à assembler et à préparer les données pour effectuer des analyses. Par conséquent, la capacité d'accéder rapidement aux volumes et à la variété des données disponibles aujourd'hui, de les exploiter et de leur donner un sens est essentielle pour conserver un avantage concurrentiel sur le marché actuel.
+Database analysts and administrators spend a lot of time assembling and preparing data for analysis. Therefore, the ability to quickly access, leverage and make sense of the volumes and variety of data available today is essential to maintaining a competitive advantage in today's marketplace.
 
-Oracle Analytics Server offre de puissantes capacités de gestion visuelle des données permettant aux utilisateurs de créer de nouveaux ensembles de données de manière dynamique et rapide.
+Oracle Analytics Server provides powerful visual data management capabilities allowing users to create new data sets dynamically and quickly.
 
-Cet exercice vous présentera les fonctionnalités clés de la gestion des données en libre-service au sein d'Oracle Analytics Server.
+This exercise will introduce you to the key capabilities of self-service data management within Oracle Analytics Server.
 
-## Créer et enrichir un Dataset
+## Create and enrich a Dataset
 
-Dans ce chapitre, nous commencerons par les bases du téléchargement d'une feuille de calcul dans Oracle Analytics Server. Une fois le téléchargement réussi, nous examinerons les éléments de données et explorerons certaines des capacités de transformation et d'enrichissement des données qui permettent un processus de préparation des données fluide et homogène.
+In this chapter, we will start with the basics of uploading a spreadsheet to Oracle Analytics Server. Once the upload is successful, we will review the data elements and explore some of the data transformation and enrichment capabilities that enable a smooth and seamless data preparation process.
 
-1.  Clicquez sur *"Create"* dans le coin supérieur droit.
+1. Click *"Create"* in the upper right corner.
 
     !["oashomescreen"](daea5cdf39c56cac3da0d953a4fc74ad.png)
 
-2.  **Cliquez** sur Dataset dans le menu.
+2. **Click** Dataset in the menu.
 
     !["createdataset"](b1fb6fb13fe2af4b36559d3e836b9eb2.png)
 
-3.  **Uploadez** la feuille de calcul "employeeTermination.xlsx".
+3. **Upload** the "employeeTermination.xlsx" spreadsheet.
 
     !["uploadterminationfile"](bc6b3b6f9e05556f3354c82b732e271a.png)
 
-    Une fois uploadé, cliquez sur le bouton OK
+    Once uploaded, click on the OK button
 
     ![](b98ad3b680be47ef7e71f4a4157d9c4d.png)
 
-    Sauvegardez votre Dataset puis cliquez sur « EmployeeTermniation » en bas de l’écran.
+    Save your Dataset then click on “EmployeeTermniation” at the bottom of the screen.
 
     ![](a3506052aae690c5db0a25a221de3f74.png)
 
-    Après avoir créé un dataset, celui-ci est soumis à un profilage au niveau des colonnes afin de produire un ensemble de recommandations sémantiques pour réparer ou enrichir vos données. Ces recommandations sont basées sur la détection automatique par le système d'un type sémantique spécifique au cours de l'étape de profilage. Après avoir profilé les données, vous pouvez les modifier et mettre en œuvre les recommandations d'enrichissement fournies à l'extrême droite de la palette. Gardez à l'esprit que les éléments spécifiques à la date et leurs types sémantiques dicteront la variété et le nombre de recommandations que vous recevrez et que vous pourrez inclure dans votre dataset.
+    After creating a dataset, it is subjected to column-level profiling to produce a set of semantic recommendations to repair or enrich your data. These recommendations are based on the system automatically detecting a specific semantic type during the profiling step. After profiling the data, you can modify it and implement the enrichment recommendations provided on the far right of the palette. Keep in mind that date-specific items and their semantic types will dictate the variety and number of recommendations you receive and can include in your dataset.
 
     !["datasetprofileresults"](94ff622a04c02669325b092ab63918b4.png)
 
-4.  Utilisez la barre de défilement située en bas de l'écran et passez en revue les éléments de données. Chaque élément a été étiqueté avec un identifiant.
-    -   A = Attribute
-    -   '\#' = Measure
-    -   Clock = Time
+4. Use the scroll bar at the bottom of the screen and review the data items. Each item has been labeled with an identifier.
+    - A = Attribute
+    - '\#' = Measure
+    - Clock = Time
 
-        Assurez-vous que vos éléments de données ont été correctement étiquetés, car l'affectation contrôlera les propriétés et les options d'analyse disponibles au cours de l'analyse.
+        Make sure your data elements have been labeled correctly, as the assignment will control the properties and analysis options available during analysis.
 
-        Utilisez la barre de défilement pour localiser l'ID et le numéro d'employé dans la source de données. Remarquez que chaque élément a été marqué d'un \#, ce qui indique qu'Oracle Analytics Server a identifié l'élément comme étant une mesure ou un élément numérique. Les numéros d'employés et les identifiants ne sont généralement pas des mesures à agréger ou à résumer. Ce sont des attributs utilisés à des fins d'identification.
+        Use the scroll bar to locate the employee ID and number in the data source. Notice that each element has been marked with a \#, which indicates that Oracle Analytics Server has identified the element as a metric or numeric element. Employee numbers and IDs are generally not metrics to aggregate or summarize. These are attributes used for identification purposes.
 
-        Modifier l'identifiant de l'élément de données pour les éléments de données ID et Employee.
+        Change the data element ID for ID and Employee data elements.
 
-        **Clicquez** sur la colonne ID. Remarquez la boîte de propriétés de l'ID dans le coin inférieur gauche. Modifions l'identifiant. Sous la propriété 'Treat As'. **Cliquez** sur 'measure' et sélectionnez attribute.
+        **Click** on the ID column. Notice the boxThe ID Properties tab is in the lower left corner. Let's change the identifier. Under the property 'Treat As'. **Click** on 'measure' and select attribute.
 
         !["modifytreatas"](3ede88c40502545d7edbcf86e20d2d6e.png)
 
-        Continuez et localisez le numéro de l'employé, et faites la même modification.
+        Go ahead and locate the employee number, and make the same change.
 
         !["modifyemployeenumber"](3a0c17c560df62db14a0843f729725bf.png)
 
-        En examinant les colonnes restantes, vous trouverez peut-être d'autres éléments de données à modifier.
+        As you review the remaining columns, you may find additional data elements to modify.
 
-5.  Continuez à faire défiler l'écran vers la droite jusqu'à ce que vous atteigniez la fin. Notez que l'ensemble de données comprend le numéro de sécurité sociale. **Cliquez** sur la colonne intitulée SSN. Le numéro de sécurité sociale est une donnée sensible et Oracle Analytics Server l'a reconnu et a émis 6 recommandations. Vous pouvez choisir de masquer, de supprimer ou d'extraire une partie de ces données d'un simple clic de souris.
+5. Keep scrolling right until you reach the end. Note that the data set includes social security number. **Click** on the column labeled SSN. The social security number is sensitive data and Oracle Analytics Server recognized this and issued 6 recommendations. You can choose to hide, delete or extract part of this data with a single mouse click.
 
-    **Sélectionnez** 'Obfuscate First 5 digits of SSN'
+    **Select** 'Obfuscate First 5 digits of SSN'
 
     !["obfuscatessn"](6289f67ff9c42655941256b55cc48362.png)
 
-6.  Encore plus à droite, au-delà du numéro de sécurité sociale, repérez la colonne ‘Zip Code’.
+6. Further to the right, beyond the social security number, locate the ‘Zip Code’ column.
 
-    Zip code a été identifié comme un attribut, mais certains enregistrements de codes postaux semblent incomplets.
+    Zip code was identified as an attribute, but some zip code records appear incomplete.
 
-    Vous remarquerez, au-dessus de l'en-tête de la colonne, que chaque élément de données est associé à une fiche d'information sur la qualité des données.
+    You will notice above the column header that each data element has a data quality information sheet associated with it.
 
-    Cette fiche fournit une visualisation illustrant les informations relatives à l'élément de données ainsi que des informations sur la distribution des enregistrements. En outre, elle donne un aperçu de la propreté des enregistrements dans chaque colonne.
+    This sheet provides a visualization illustrating information about the data element as well as information about the distribution of records. Additionally, it provides insight into the cleanliness of the records in each column.
 
-    Notez la barre rouge en haut de la carte d'aperçu de la qualité des données. Survolez la barre rouge. Oracle Analytics Server a détecté les valeurs non valides en se basant sur la connaissance sémantique approfondie fournie par System Knowledge. System Knowledge fournit un vaste ensemble de données de référence géographiques et démographiques utilisées au cours du processus de profilage.
+    Note the red bar at the top of the data quality overview map. Hover over the red bar. Oracle Analytics Server detected invalid values ​​based on deep semantic knowledge provided by System Knowledge. System Knowledge provides an extensive set of geographic and demographic reference data used during the profiling process.
 
-    **Cliquez** sur zip code et examinez les recommandations fournies par Oracle Analytics Server.
+    **Click** zip code and review the recommendations provided by Oracle Analytics Server.
 
-    Réparons les valeurs de Zip Code en sélectionnant la recommandation "Repair Zip Code'.
+    Let's repair the Zip Code values ​​by selecting the 'Repair Zip Code' recommendation.
 
     !["repairzipcode"](46c7bf383aed6318e3808068214ac82f.png)
 
-    Oracle Analytics Server a corrigé chaque enregistrement de code postal dans la colonne. Notez que la barre horizontale est passée du rouge au vert.
+    Oracle Analytics Server corrected each zip code record in the column. Notice that the horizontal bar has changed from red to green.
 
     !["repairedzipcode"](a368b044e23fb831ef9d5d9bb8a60c64.png)
 
-    En outre, je vois qu'Oracle Analytics Server a recommandé d'enrichir mon jeu de données en fournissant de nombreuses options de noms géographiques, y compris la ville et l'État.
+    Additionally, I see that Oracle Analytics Server recommended enriching my dataset by providing many geographic name options, including city and state.
 
-    Améliorons l'ensemble de données en utilisant les recommandations relatives à l'État et à la ville pour notre analyse.
+    Let's improve the dataset by using state and city recommendations for our analysis.
 
-    Dans le panneau des recommandations, **cliquez** sur 'Enrich Zip Code with State', puis 'Enrich Zip Code with City'.
+    In the recommendations panel, **click** on 'Enrich Zip Code with State', then 'Enrich Zip Code with City'.
 
     !["zipcoderecommendations"](da9f05ced745e0c3604cfb1e387c0f23.png)
 
-    Nous avons ajouté deux colonnes supplémentaires à notre dataset.
+    We added two additional columns to our dataset.
 
-    Ensuite, nous renommerons chaque étiquette de colonne.
+    Next, we will rename each column label.
 
-    Double-**Cliquez** sur l’étiquette de la colonne Zip Code_City.
+    Double-**Click** on the Zip Code_City column label.
 
-    **Clicquez** ‘rename’ – saisissez ‘City’
+    **Click** ‘rename’ – enter ‘City’
 
-    Procédez de la même manière pour renommer l'étiquette de la colonne Zip Code_State en State.
+    Follow these steps to rename the Zip Code_State column label to State.
 
-    **Cliquez droit** sur l’étiquette de la colonne Sate, Remarquez qu'il existe une grande variété d'options de transformation !
+    **Right-click** on the Sate column label, Notice that there are a wide variety of transformation options!
 
     !["transformationoptions"](9b1d26f81c8a40f34dd69f673cece4e4.png)
 
-    Revenez à la gauche du dataset. Localisez la colonne "EducationField".
+    Return to the left of the dataset. Locate the “EducationField” column.
 
-    Examinez les informations fournies dans la carte d'aperçu de la qualité des données.
+    Review the information provided in the Data Quality Overview card.
 
-    Oracle Analytics Server a identifié des valeurs manquantes ou nulles.
+    Oracle Analytics Server identified missing or null values.
 
-    La barre de qualité des données indique que 5 % des enregistrements sont des valeurs nulles.
+    The data quality bar indicates that 5% of records are zero values.
 
-    Vous pouvez remplacer des valeurs nulles ou manquantes en double-cliquant sur "Missing or Null" et en tapant la valeur de remplacement.
+    You can replace null or missing values ​​by double-clicking "Missing or Null" and typing the replacement value.
 
-    Double-**Cliquez** 'Missing or Null' et saisissez 'Other'
+    Double-**Click** 'Missing or Null' and enter 'Other'
 
-7.  Effectuons une dernière modification de notre ensemble de données. Revenez au début du dataset, jusqu'à la gauche.
+7. Let's make one final modification to our dataset. Go back to the beginning of the dataset, all the way to the left.
 
-    Je souhaite combiner les colonnes "First Name" et "Last Name" en une seule colonne intitulée "Employee Name".
+    I want to combine the "First Name" and "Last Name" columns into a single column called "Employee Name".
 
-    Nous allons concaténer les colonnes pour les fusionner.
+    We will concatenate the columns to merge them.
 
-    **Cliquez droit** sur 'First Name' et sélectionnez 'concatenate'
+    **Right-click** on 'First Name' and select 'concatenate'
 
     !["concatenatefirstlastname"](893ced3d31af5fd73a3a4d4096a7011f.png)
 
-    Dans la boite de dialogue concatenate, faites les modifications suivantes :
+    In the concatenate dialog box, make the following changes:
 
-    -   Donnez un nouveau nom à la colonne – Employee Name
-    -   Laissez Merge Column avec First Name
-    -   Modifiez ‘With’ avec Last Name
-    -   Laissez le délimiteur sur Space ( )
-    -   Une fois fini, Cliquez sur ‘Add Step’
+    - Give the column a new name – Employee Name
+    - Let Merge Column with First Name
+    - Change ‘With’ with Last Name
+    - Leave the delimiter at Space ( )
+    - Once finished, Click on ‘Add Step’
 
-        **Cliquez droit** sur First Name et Last Name et sélectionnez ‘Hide’
+        **Right-click** on First Name and Last Name and select ‘Hide’
 
-8.  A côté de ‘Employee Name’, Il y a la colonne ‘Born’.
+8. Next to ‘Employee Name’, there is the column ‘Born’.
 
-    Modifions l'intitulé de la colonne en "birthdate". Suivez les étapes énumérées ci-dessus pour "renommer" votre colonne..
+    Let's change the column title to "birthdate". Follow the steps listed above to "rename" your column.
 
-    Ensuite, j'aimerais ajouter une colonne qui calcule ‘Age’.
+    Next, I would like to add a column that calculates ‘Age’.
 
-    En haut à gauche, vous remarquerez une icône " + " dans le panneau de navigation des scripts.
+    At the top left, you will notice a "+" icon in the script navigation panel.
 
-    Examinez les éléments répertoriés dans le panneau de navigation des scripts. Le panneau de navigation des scripts a enregistré chaque modification que nous avons apportée à l'ensemble de données. Les modifications résident dans le dataset et seront appliquées lorsque la source de données sera actualisée ou ajoutée.
+    Review the items listed in the Scripts navigation pane. The script navigation panel recorded every change we made to the dataset. The changes reside in the dataset and will be applied when the data source is refreshed or added.
 
     ![](dc166ff1141928a696de17e53ee18158.png)
 
-    **Cliquez** sur l'icône +. La boîte de dialogue Créer une colonne apparaît.
+    **Click** on the + icon. The Create Column dialog box appears.
 
-    Donnez un nom à la nouvelle colonne - Age
+    Give the new column a name - Age
 
-    Entrez votre calcul en tapant simplement dans la case ou en utilisant les fonctions énumérées dans le tableau de droite.
+    Enter your calculation by simply typing in the box or using the functions listed in the table to the right.
 
-    J'aimerais calculer l'âge en utilisant la date du jour (date actuelle) et la colonne birthdate. Je dois utiliser la fonction année pour créer mon calcul.
+    I would like to calculate age using today's date (current date) and the birthdate column. I need to use the year function to create my calculation.
 
-    Dans la boîte, commencez à taper "year". Au fur et à mesure que vous tapez, vous remarquez qu' Oracle Analytics Server propose des choix correspondant à la saisie des données. Sélectionnez "Year" lorsqu'il s'agit d'une option.
+    In the box, start typing "year." As you type, you will notice that Oracle Analytics Server offers choices corresponding to data entry. Select "Year" when this is an option.
 
-    Remarquez que (dimension) apparaît à côté de Year. Utilisons la fonction de date du jour pour spécifier l’année.
+    Notice that (dimension) appears next to Year. Let's use today's date function to specify the year.
 
     !["calculationdialoguebox"](e9c436d630a9184e60caf586ee98e548.png)
 
-    Commencez à taper "current". Au fur et à mesure que vous tapez, vous devriez voir apparaître des options correspondant à "current". **Sélectionnez** "current_date" lorsqu'il s'agit d'une option.
+    Start typing "current". As you type, you should see options corresponding to "current". **Select** "current_date" when this is an option.
 
-    Veillez à déplacer votre curseur en dehors de la parenthèse.
+    Be sure to move your cursor outside of the parenthesis.
 
-    -   Entrez un ‘ – ‘ pour la soustraction.
+    - Enter a ‘ – ‘ for subtraction.
 
-        Pour compléter nos calculs, nous utiliserons l'année spécifiée dans Birthdate.
+        To complete our calculations, we will use the year specified in Birthdate.
 
-    -   Répétez les étapes ci-dessus pour créer Year(Birthdate)
+    - Repeat the steps above to create Year(Birthdate)
 
-        Votre saisie devrait ressembler à ceci :
+        Your entry should look like this:
 
         !["agecalculationimage"](2b2133742cbd49a6155941b859815b03.png)
 
-        Une fois terminé, **cliquez** sur ‘Validate’. Si le calcul a été saisi avec succès, **cliquez** sur ‘Add Step’.
+        Once finished, **click** on ‘Validate’. Ifthe calculation has been entered successfully, **click** on ‘Add Step’.
 
-        Je suis très satisfait de mon dataset. J'ai effectué plusieurs modifications et nettoyé mes données. Elles sont prêtes pour l'analyse.
+        I am very satisfied with my dataset. I made several changes and cleaned up my data. They are ready for analysis.
 
-        Nous sommes maintenant prêts à analyser nos données. **Cliquez** Create - Workbook.
+        We are now ready to analyze our data. **Click** Create - Workbook.
 
         !["createworkbookimage"](45214e590dc0450c1a3fea88c6f18d89.png)
 
-        Vous pouvez commencer votre analyse en sélectionnant les éléments de données appropriés.
+        You can begin your analysis by selecting the appropriate data elements.
 
-        Examinez les éléments de données "birthdate" et "Date left" répertoriés dans l'écran de contrôle.
+        Examine the "birthdate" and "Date left" data elements listed in the control screen.
 
-        Cliquez sur “Birthdate. Remarquez qu'Oracle Analytics a créé automatiquement une dimension temporelle pour l'analyse.
+        Click on “Birthdate. Notice that Oracle Analytics automatically created a time dimension for the analysis.
 
-        Vous pouvez découper vos données selon diverses dimensions temporelles sans avoir à écrire de code ou à transformer vos éléments spécifiques à la date..
+        You can slice your data along various time dimensions without having to write code or transform your date-specific elements.
 
         !["timedimensionhierarchy"](f100b479022bc9dc8549e0253fde5d3e.png)
 
 ## Self-service Data Modeling
 
-Oracle Analytics Server permet de créer rapidement et facilement de nouveaux dataset en ajoutant des tables provenant d'une ou de plusieurs connexions à un dataset à des fins d'analyse. Cet exercice explique comment rassembler des entités de données provenant d'une ou de plusieurs sources, sélectionner différentes tables, modifier les colonnes et les joindre, puis prévisualiser l'ensemble de données.
+Oracle Analytics Server makes it quick and easy to create new datasets by adding tables from one or more connections to a dataset for analysis. This exercise explains how to gather data entities from one or more sources, select different tables, edit and join columns, and then preview the dataset.
 
-Les dataset peuvent être combinés avec d'autres dataset, sauvegardés et partagés avec d'autres personnes au sein de l'organisation à des fins d'analyse.
+Datasets can be combined with other datasets, saved and shared with others within the organization for analysis.
 
-Pour cet exercice, il vous faudra une connexion à une base de données Oracle. Nous allons créer cette connexion.
+For this exercise, you will need a connection to an Oracle database. We're going to create that connection.
 
-**Cliquez** sur create dans le coin supérieur droit puis **choisissez** Connection
+**Click** create in the upper right corner then **choose** Connection
 
 ![](2ff58fe0614698752962f80d524ad274.png)
 
-Prenez quelques instants pour parcourir la liste des connexions disponible dans Oracle Analytics Server.
+Take a moment to browse the list of connections available in Oracle Analytics Server.
 
-**Cliquez** ensuite sur Oracle Database dans les choix de connections
+**Then click** on Oracle Database in the connection choices
 
 ![](4bb6f45fcd8a417b88cbf64739c69924.png)
 
-**Saisissez** les informations de connexions à l’identique de l’écran ci-dessous et **cliquez** sur Save un fois fait. Le mot de passe est *Admin123*.
+**Enter** the connection information identical to the screen below and **click** on Save once done. The password is *Admin123*.
 
 ![](41f5f72f50ab1a7fba7b47347b19774d.png)
 
-La connexion est maintenant créée.
+The connection is now created.
 
-Nous pouvons commencer l’exercice.
+We can start the exercise.
 
-1.  Create - Dataset
+1. Create - Dataset
 
     !["createdataset"](b1fb6fb13fe2af4b36559d3e836b9eb2.png)
 
     .
 
-    **Cliquez** sur la connexion orclpdb. La base de données dispose d'un grand nombre de schémas. Nous allons utiliser SAMPLEAPP.
+    **Click** on the orclpdb connection. The database has a large number of schemas. We will use SAMPLEAPP.
 
     ![](07c1e227504e1217f1c3c86538021ba3.png)
 
-2.  Nous souhaitons analyser les commandes des clients, les produits, le chiffre d'affaires et les informations relatives à la facturation. Je vais rassembler les tables dont j'ai besoin pour réaliser mon analyse..
+2. We want to analyze customer orders, products, revenue and billing information. I'm going to collect the tables I need to perform my analysis.
 
-    Commençons par sélectionner la table "CLOUD_D_CUSTOMERS". Vous pouvez double-cliquer dessus ou la faire glisser sur la palette.
+    Let's start by selecting the "CLOUD_D_CUSTOMERS" table. You can double-click it or drag it to the palette.
 
-    Une fois sélectionnée, la table est représentée par un diagramme dans la partie supérieure de la palette. En dessous, vous verrez les éléments de données qui résident dans la table.
+    Once selected, the table is represented by a diagram in the upper part of the palette. Below you will see the data elements that reside in the table.
 
     !["reviewclouddcustomertable"](18f4f876591407a6baf643ef11a33a07.png)
 
-    Nous allons ensuite sélectionner les autres tableaux dont nous avons besoin. **Cliquez** avec la touche CTRL enfoncée sur les tables suivantes:
+    We will then select the other tables we need. **Click** with the CTRL key pressed on the following tables:
 
-    -   *CLOUD_D_PRODUCTS*
-    -   *CLOUD_F_BILL_REV*
-    -   *CLOUD_TIME_SMALL*
-    -   *CLOUD_D_ORDERS*
+    - *CLOUD_D_PRODUCTS*
+    - *CLOUD_F_BILL_REV*
+    - *CLOUD_TIME_SMALL*
+    - *CLOUD_D_ORDERS*
 
-        Une fois sélectionnées, **cliquez droit** et sélectionnez 'Add to dataset'
+        Once selected, **right-click** and select 'Add to dataset'
 
         !["selectadditionaltables"](312794ac4fc147aa91ff2878c654b529.gif)
 
-        Remarquez que quelques jointures ont été définies dans la source de données et qu'elles se sont donc produites automatiquement.
+        Notice that a few joins have been challengedneated in the data source and therefore occurred automatically.
 
         !["datamodeldiagram"](864ddddf25c8c8cc170e4de73e9cc16d.png)
 
-        **Cliquez** ou **survolez** le point de connexion.
+        **Click** or **hover** the connection point.
 
-        *CLOUD_F_BILLREV et CLOUD_D_ORDERS sont jointes sur Order_Status*
+        *CLOUD_F_BILLREV and CLOUD_D_ORDERS are attached on Order_Status*
 
-        !["jointables"](2f948f580ad1fe36a8d76f367a4e7f7c.png)
+        !["joinable"](2f948f580ad1fe36a8d76f367a4e7f7c.png)
 
-        *CLOUD_F_BILLREV et CLOUD_D_PRODUCTS sont jointes sur PROD_ITEM_KEY*
+        *CLOUD_F_BILLREV and CLOUD_D_PRODUCTS are attached on PROD_ITEM_KEY*
 
-3.  Nous devons ajouter manuellement des jointures pour les tables CLOUD_D_CUSTOMERS et CLOUD_TIME_SMAL.
+3. We need to manually add joins for the CLOUD_D_CUSTOMERS and CLOUD_TIME_SMAL tables.
 
-    **Cliquez s**ur CLOUD_F_BILLREV. CUST_NUMBER se trouve dans la table. Remarquez qu'il est identifié comme une mesure. Pour joindre CLOUD_F_BILLREV à CLOUD_D_CUSTOMERS, nous devons modifier l'identifiant**.**
+    **Click on CLOUD_F_BILLREV. CUST_NUMBER is in the table. Notice that it is identified as a measure. To join CLOUD_F_BILLREV to CLOUD_D_CUSTOMERS we need to change the id**.**
 
-    **Cliquez** sur le nom de la colonne \# CUST_NUMBER et modifiez l'identifiant en Attribute.
+    **Click** on the column name \#CUST_NUMBER and change the ID to Attribute.
 
     !["modifyidentifierforjoin"](6acb4cba35fcdf44908228250b7d6edd.png)
 
-    **Cliquez** avec le bouton droit de la souris sur CLOUD_D_CUSTOMERS et sélectionnez Join To CLOUD_F_BILL_REV
+    **Right-click** on CLOUD_D_CUSTOMERS and select Join To CLOUD_F_BILL_REV
 
     !["customertobillrevjoin"](63d313553da706d83218d81715538c04.png)
 
-    Notez que la jointure a été suggérée pour vous.
+    Note that the join was suggested for you.
 
     !["suggestedjoindataelements"](8ad092c514fab43bd64a04634c8b5797.png)
 
-    **Cliquez** avec le bouton droit de la souris sur CLOUD_TIME_SMALL. Sélectionnez Joindre à CLOUD_F_BILLREV. Aucune correspondance claire entre les éléments de date n'a été identifiée. Sélectionnez CLOUD_F_BILLREV – TIME_BILL_DT et CLOUD_TIME_SMALL - DAY_TS!["billrevtotimesmalljoin"](882acef049085c9594d9d1f98745bf20.png)
+    **Right-click** on CLOUD_TIME_SMALL. Select Attach to CLOUD_F_BILLREV. No clear correspondence between date elements has been identified. Select CLOUD_F_BILLREV – TIME_BILL_DT and CLOUD_TIME_SMALL - DAY_TS!["billrevtotimesmalljoin"](882acef049085c9594d9d1f98745bf20.png)
 
-    Sauvegardons notre dataset afin de pouvoir terminer notre analyse. **Cliquez** sur l'icône de la disquette dans le coin supérieur droit.
+    Let's save our dataset so we can complete our analysis. **Click** the floppy disk icon in the upper right corner.
 
-    Nommez votre jeu de données - my new dataset
+    Name your dataset - my new dataset
 
-4.  Avant de passer à "Create Workbook", jetez un coup d'œil au bas de la palette, où se trouvent des onglets représentant toutes les tables que vous avez sélectionnées.
+4. Before moving on to "Create Workbook", take a look at the bottom of the palette, where there are tabs representing all the tables you have selected.
 
-    **Cliquez** sur la table *CLOUD_D_CUSTOMERS*.
+    **Click** on the *CLOUD_D_CUSTOMERS* table.
 
     !["navigatetocustomerstable"](5abea8277cbb73777848f08deaa2b66c.png)
 
-    Remarquez le panneau de recommandations sur la droite. Vous pouvez appliquer n'importe laquelle des recommandations fournies par le moteur de connaissances.
+    Note the recommendations panel on the right. You can apply any of the recommendations provided by the knowledge engine.
 
-    En outre, vous pouvez cliquez sur ' Edit Definition '
+    Additionally, you can click on 'Edit Definition'
 
     !["reviewrecommendationscustomers"](afd854724d0e1a2620aa9c94f3baca0b.png)
 
-    Remarquez ce qui suit:
+    Notice the following:
 
-    -   Vous pouvez ajouter ou supprimer des colonnes dans le tableau de données.
-    -   Vous pouvez modifier l'indicateur de données si nécessaire.
-    -   Vous pouvez modifier les paramètres d'accès aux données.
+    - You can add or remove columns in the data table.
+    - You can change the data indicator if necessary.
+    - You can change data access settings.
 
         !["dataaccessoptions"](0bca119a0cee45d491d78d89ab0c2f0f.png)
 
-        **Cliquez** sur Ok, puis sur Create Workbook. Si vous y êtes invité, enregistrez les modifications apportées au dataset.
+        **Click** Ok, then Create Workbook. If prompted, save the changes to the dataset.
 
-        Regardez le panneau des éléments de données à gauche. Chaque tableau est représenté par une icône de dossier.
+        Look at the Data Elements panel on the left. Each table is represented by a folder icon.
 
-        Vous êtes prêt à commencer votre analyse.
+        You are ready to begin your analysis.
 
-        Vous pouvez ajouter d'autres sources de données à votre analyse. **Cliquez** sur le + à droite du champ de recherche.
+        You can add other data sources to your analysis. **Click** on the + to the right of the search box.
 
         !["adddatasetinworkbook"](e7f3240fe13a0235b1d10cd973a0b913.png)
 
-        À ce stade, vous pouvez :
+        At this point you can:
 
-    -   Ajouter un dataset
-    -   Utiliser un subject area
-    -   créer un nouveau dataset, en sélectionnant des données à partir de votre poste local ou d'une autre source de données.
+    - Add a dataset
+    - Use a subject area
+    - create a new dataset, by selecting data from your local workstation or another data source.
 
         !["workbookdatasourceoptions"](3f2b2f66349b878922e295f2f3500486.png)
 
-        Oracle Analytics Server offre des capacités de gestion de données flexibles et agiles permettant aux utilisateurs d'accéder à une grande variété de sources de données et de les rassembler.
+        Oracle Analytics Server provides flexible and agile data management capabilities allowing users to access a wide variety of data sources andbring them together.
