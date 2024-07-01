@@ -128,14 +128,16 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
         !["selectdataproductname"](c9aa79015c51a645d7d15f102babc8b4.png)
 
         Perform the same steps on "SampleApp" and select "Products - Product" to link the data sources.
-
+   
+       ![](2024-07-01_16-22.png)
+       
         You will notice that the data sources are attached.
 
-    4. **Click on** “Visualize”.
+    5. **Click on** “Visualize”.
 
         !["navigatebacktovisualize"](631ac423e10abd0ffa4b5cb7e8fa380f.png)
 
-    5. Explore the Data Elements panel on the left. Note that the Inventory worksheet is listed under SampleApp.
+    6. Explore the Data Elements panel on the left. Note that the Inventory worksheet is listed under SampleApp.
 
         !["dataelementspanelincludesinventory"](8dc9ea3a9766fd1242c576744217254b.png)
 
