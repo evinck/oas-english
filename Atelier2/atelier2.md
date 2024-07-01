@@ -268,7 +268,9 @@ We can start the exercise.
         !["joinable"](2f948f580ad1fe36a8d76f367a4e7f7c.png)
 
         *CLOUD_F_BILLREV and CLOUD_D_PRODUCTS are attached on PROD_ITEM_KEY*
-
+        
+        ![](2024-07-01_20-35.png)
+      
 3. We need to manually add joins for the CLOUD_D_CUSTOMERS and CLOUD_TIME_SMAL tables.
 
     **Click on CLOUD_F_BILLREV. CUST_NUMBER is in the table. Notice that it is identified as a measure. To join CLOUD_F_BILLREV to CLOUD_D_CUSTOMERS we need to change the id**.**
