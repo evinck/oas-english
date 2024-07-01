@@ -24,9 +24,9 @@ In this workshop, you will:
 
 
 ## Documentation
-* [Oracle Analytics Documentation](https://www.oracle.com/en/business-analytics/)
-* [Oracle Analytics Platform Documentation](https://www.oracle.com/fr/business-analytics/analytics-platform/)
-* [Oracle Analytics Cloud Documentation](https://docs.oracle.com/fr-fr/iaas/analytics-cloud/index.html)
+* [Oracle Analytics Documentation](https://www.oracle.com/business-analytics/)
+* [Oracle Analytics Platform Documentation](https://www.oracle.com/business-analytics/analytics-platform/)
+* [Oracle Analytics Cloud Documentation](https://docs.oracle.com/iaas/analytics-cloud/index.html)
 * [Oracle Analytics Server Documentation](https://www.oracle.com/business-analytics/analytics-server.html)
 
 
