@@ -28,7 +28,7 @@ In this chapter, we will start with the basics of uploading a spreadsheet to Ora
 
     ![](b98ad3b680be47ef7e71f4a4157d9c4d.png)
 
-    Save your Dataset then click on “EmployeeTermniation” at the bottom of the screen.
+    Save your Dataset then click on “Employee Termination” at the bottom of the screen.
 
     ![](a3506052aae690c5db0a25a221de3f74.png)
 
@@ -134,6 +134,8 @@ In this chapter, we will start with the basics of uploading a spreadsheet to Ora
     - Change ‘With’ with Last Name
     - Leave the delimiter at Space ( )
     - Once finished, Click on ‘Add Step’
+  
+      ![](2024-07-01_20-12.png)
 
         **Right-click** on First Name and Last Name and select ‘Hide’
 
