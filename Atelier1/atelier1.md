@@ -74,11 +74,11 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
     From the data elements panel, Click on "+" and "Add Data" to import all inventory data into your Workbook.
 
-    ![](2024-07-01_16-12.png)
-
     ![](7e3120b3491e05e360a75755f1562ad5.png)
 
 12. **Click** on “Create Data Set” then “Drop data file here or click to browse”.
+
+    ![](2024-07-01_16-12.png)
 
     !["locateinventory"](a8393febe16ce486a19274e2a588e2e9.png)
 
