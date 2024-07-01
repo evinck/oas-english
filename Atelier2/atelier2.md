@@ -321,7 +321,7 @@ We can start the exercise.
 
         You can add other data sources to your analysis. **Click** on the + to the right of the search box.
 
-        ![](2024-07-01_20-35.png)
+        ![](2024-07-01_22-09.png)
 
         At this point you can:
 
