@@ -129,7 +129,7 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
         Perform the same steps on "SampleApp" and select "Products - Product" to link the data sources.
    
-       ![](2024-07-01_16-22.png)
+       ![](2024-07-01_16-31.png)
        
         You will notice that the data sources are attached.
 
