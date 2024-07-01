@@ -172,6 +172,8 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
     
     ![](2024-07-01_17-00.png)
 
+    ![](2024-07-01_17-06.png)
+
 19. Let's create a visualization to analyze products and supplier payments.
 
     Expand Products and VendorPayments, select *Product* and *OutstandingPayment*. Then, **Right** Click and **select** “Pick Visualization.”
