@@ -268,7 +268,7 @@ Oracle Analytics Server offers advanced mapping capabilities and the ability to 
 
     You have successfully created your custom calculation which can be used like any other measurement.
 
-    !["profitbycustomercountcalculation"](aec0cdb8185cc113971643f99d2546cc.png)
+    !["profitbycustomercountcalculation"](2024-07-01_17-33.png)
 
 5. Let's use our custom calculation in some visualizations.
 
