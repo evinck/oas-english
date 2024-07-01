@@ -306,8 +306,10 @@ Oracle Analytics Server offers advanced mapping capabilities and the ability to 
     3. **Click** “Done”.
 
         ![](43b8fde00985ff10de4e22ce123e2729.png)
+   
+       ![](2024-07-01_17-48.png)
 
-        There are several ways to filter information to obtain information on different attribute groups and aggregation levels. The canvas is an extremely dynamic and interactive palette.
+11. There are several ways to filter information to obtain information on different attribute groups and aggregation levels. The canvas is an extremely dynamic and interactive palette.
 
         Remember, at the beginning of the exercise we looked at the profit ratio by product, and we added a filter to a specific visualization to look at the profit ratio for products categorized under the Audio product type. (Steps 1-8).
 
