@@ -76,8 +76,6 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
     ![](7e3120b3491e05e360a75755f1562ad5.png)
 
-    ![](2024-07-01_16-22.png)
-
 12. **Click** on “Create Data Set” then “Drop data file here or click to browse”.
 
     ![](2024-07-01_16-12.png)
@@ -96,7 +94,9 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
     ![](54bda2c2774287a84054669804f848b0.png)
 
-13. Return to the "New Workbook" tab located above the Workbook area.
+    ![](2024-07-01_16-22.png)
+
+14. Return to the "New Workbook" tab located above the Workbook area.
 
     Note that the “Inventory” Dataset is available to add to the Workbook.
 
@@ -139,7 +139,7 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
         !["dataelementspanelincludesinventory"](8dc9ea3a9766fd1242c576744217254b.png)
 
-14. Now that we have successfully joined our dataSo, let's continue our analysis. Hold **control and select** "Product -\> Product" in SampleApp and "Stock" and "Demand" in Inventory.
+15. Now that we have successfully joined our dataSo, let's continue our analysis. Hold **control and select** "Product -\> Product" in SampleApp and "Stock" and "Demand" in Inventory.
     1. **Click** **right** and **Select** “Pick Visualization”.
 
         !["createvisualizationwithblendeddataset"](c2799ceb79954be87461ba4acdc936b2.png)
@@ -148,7 +148,7 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
         !["selectbarchartvisualization"](bf21fbc5ddca065715ac03e6203b30d8.png)
 
-15. Notice grammar panel for bar visualization. By placing the "Stock" and "Demand" metrics respectively on the y-axis, the chart should look as shown in the image.
+16. Notice grammar panel for bar visualization. By placing the "Stock" and "Demand" metrics respectively on the y-axis, the chart should look as shown in the image.
 
     !["grammarpanelbarchart"](1d8db4e82c415137eac187363b43a5f1.png)
 
@@ -164,23 +164,23 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
     For other products, the relationship between inventory and demand is not much different. We are curious as to why stock levels for both products are lower than current demand.
 
-16. We decide to study debts and receivables. To continue our analysis, we import the outstanding vendor payments spreadsheet that we obtained from our financial system.
+17. We decide to study debts and receivables. To continue our analysis, we import the outstanding vendor payments spreadsheet that we obtained from our financial system.
 
     **Import** the *VendorPayments.xlsx* spreadsheet by repeating steps 9 through 12. You should now see the data set for Vendor Payments appear in the Data Elements panel of the screen. welcome to the workbook.
 
     !["dataelementspanelincludingvendorpaymentssource"](1d202b7220b27be7de76dbc0c4a6e251.png)
 
-17. Let's create a visualization to analyze products and supplier payments.
+18. Let's create a visualization to analyze products and supplier payments.
 
     Expand Products and VendorPayments, select *Product* and *OutstandingPayment*. Then, **Right** Click and **select** “Pick Visualization.”
 
     !["visualizationblendeddatasetsproductoutstandingvendorpayments"](3c1ed80e9fafcae6f7c4cfabda366886.png)
 
-18. Select “Tag Cloud”.
+19. Select “Tag Cloud”.
 
     !["selecttagcloudvisualization"](ee463f598ab632cc3b7ad6f82cab66bd.png)
 
-19. You should see a new visualization on the canvas. The visualization shows that **MicroPod** and **SoundX** **Nano** are the products with the highest number of outstanding supplier payments.
+20. You should see a new visualization on the canvas. The visualization shows that **MicroPod** and **SoundX** **Nano** are the products with the highest number of outstanding supplier payments.
 
     Our suppliers may not be willing to ship ordered quantities if there are significant account delinquencies.
 
@@ -190,28 +190,28 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
     Let's forecast the profit ratio and revenue performance for the coming months. Oracle Analytics Server offers easy-to-use advanced analytical functions, such as trendline, forecast, clustering or outlier detection.
 
-20. Let's start by adding a new canvas. Think of an outline as an extra page in the workbook or an extra slide in a PowerPoint presentation.
+21. Let's start by adding a new canvas. Think of an outline as an extra page in the workbook or an extra slide in a PowerPoint presentation.
 
     **Click** on the "+" icon located at the bottom of the screen to create a new canvas. On the new canvas, **Click** on the inverted triangle to the right of its name. Select “Canvas Properties".
 
     !["addnewcanvas"](d35e842250a6d5be4375b33b1e33cdf4.png)
 
-21. **Click** “Auto Fit” and change it to “Freeform.” **Click** “Okay”.
-22. **Select** “Profit Ratio %”, “Revenue” and “Month”. Right-click and select “Pick Visualization”. **Select** "Combo."
+22. **Click** “Auto Fit” and change it to “Freeform.” **Click** “Okay”.
+23. **Select** “Profit Ratio %”, “Revenue” and “Month”. Right-click and select “Pick Visualization”. **Select** "Combo."
 
     !["createcombochartrevenueprofitratiomonth"](a971563f16ac757c8a9f13e922d35e8e.png)
 
     Note that in "freeform" mode, the entire canvas is not used automatically.
 
-23. From the grammar panel **Right click on** "Profit Ratio %" and select "Y2-Axis." Widen the visualization for a better view.
+24. From the grammar panel **Right click on** "Profit Ratio %" and select "Y2-Axis." Widen the visualization for a better view.
 
     !["profitratioy2axis"](440974b93b6fc508860107937eac4263.png)
 
-24. **Select** the “Analytics” option in the left navigation panel. Drag and drop “Trend Line” onto the visualization.
+25. **Select** the “Analytics” option in the left navigation panel. Drag and drop “Trend Line” onto the visualization.
 
     !["advanalyticsselecttrendline"](20b9f597b549a26c13ea622cdefa5d89.png)
 
-25. You have now created a management report that presents both the revenue and profitability ratio in % with their corresponding trend lines, all without coding.
+26. You have now created a management report that presents both the revenue and profitability ratio in % with their corresponding trend lines, all without coding.
 
     **Drag and drop** “Forecast” onto the visualization and you will see the predicted results for both metrics. This may take a few moments, please be patient.
 
@@ -221,7 +221,7 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
     !["advanalyticsproperties"](a79a577524a80e6886b55b8e6a886d36.png)
 
-26. It appears that we are on the right track and our forecasts are promising. Next, we'll provide a historical overview of revenue performance using a custom calendar heatmap visualization that can be found in the Oracle Analytics Extensions library.
+27. It appears that we are on the right track and our forecasts are promising. Next, we'll provide a historical overview of revenue performance using a custom calendar heatmap visualization that can be found in the Oracle Analytics Extensions library.
 
     **Note:** We have added custom visualization in the environment for you. If you would like to learn how to upload custom visualization types, please see the section at the end of this document.
 
@@ -229,7 +229,7 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
     !["createathirdcanvas"](b99393af0ae339a6369978145d646f38.png)
 
-27. Expand Time and Revenue Metrics, **Select** *Date* and *Revenue*. Then, **Right-Click** and select “Calendar Heatmap”.
+28. Expand Time and Revenue Metrics, **Select** *Date* and *Revenue*. Then, **Right-Click** and select “Calendar Heatmap”.
 
     !["selectcalendarheatmapvisual"](66d987667eaba5cfdddb2675dbaa4479.png)
 
