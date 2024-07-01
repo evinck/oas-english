@@ -244,6 +244,8 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
     !["selectcalendarheatmapvisual"](66d987667eaba5cfdddb2675dbaa4479.png)
 
+    ![](2024-07-01_17-25.png)
+
 ## Exercise 2: Custom calculations and use of Maps
 
 Oracle Analytics Server offers advanced mapping capabilities and the ability to create custom calculations.
