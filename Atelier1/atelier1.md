@@ -280,6 +280,8 @@ Oracle Analytics Server offers advanced mapping capabilities and the ability to 
 
 6. **Select** "State Province" from "Geography" and your new custom calculation under "My Calculations." Drag and drop them onto the canvas. Note that not all states make a profit.
 
+    ![](2024-07-01_17-39.png)
+
     !["profitbycustomercountbarchart"](8fe27671538bc1a81fbf6d17a4f4d9df.png)
 
     Let's see how this looks on a map.
