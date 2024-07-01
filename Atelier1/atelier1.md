@@ -76,6 +76,8 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
     ![](7e3120b3491e05e360a75755f1562ad5.png)
 
+    ![](2024-07-01_16-22.png)
+
 12. **Click** on “Create Data Set” then “Drop data file here or click to browse”.
 
     ![](2024-07-01_16-12.png)
