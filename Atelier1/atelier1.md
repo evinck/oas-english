@@ -311,25 +311,25 @@ Oracle Analytics Server offers advanced mapping capabilities and the ability to 
 
 11. There are several ways to filter information to obtain information on different attribute groups and aggregation levels. The canvas is an extremely dynamic and interactive palette.
 
-        Remember, at the beginning of the exercise we looked at the profit ratio by product, and we added a filter to a specific visualization to look at the profit ratio for products categorized under the Audio product type. (Steps 1-8).
+Remember, at the beginning of the exercise we looked at the profit ratio by product, and we added a filter to a specific visualization to look at the profit ratio for products categorized under the Audio product type. (Steps 1-8).
 
-        In this lab, we added a filter to our canvas to examine measures specific to the United States.
+In this lab, we added a filter to our canvas to examine measures specific to the United States.
 
-        Users can quickly interact with visualizations to create slices or subsets with just a few mouse clicks to gain deeper insights.
+Users can quickly interact with visualizations to create slices or subsets with just a few mouse clicks to gain deeper insights.
 
-        Return to canvas 1.
+Return to canvas 1.
 
-        **Right-click** on the "Audio" sector of the graph and select "Keep Selected".
+**Right-click** on the "Audio" sector of the graph and select "Keep Selected".
 
-        !["donutchartproperties"](2ade3bfc4be2fd619e6be12c76a725ed.png)
+!["donutchartproperties"](2ade3bfc4be2fd619e6be12c76a725ed.png)
 
-        Notice that each object changes interactively depending on the selection of the "Audio" sector of the graph.
+Notice that each object changes interactively depending on the selection of the "Audio" sector of the graph.
 
-        !["filtertoAudioresults"](b16390309876fe0cdc60b1910ac1e5a0.png)
+!["filtertoAudioresults"](b16390309876fe0cdc60b1910ac1e5a0.png)
 
-        Clear your filter by **right-clicking** on the "Audio" sector and **selecting** "Remove Selected".
+Clear your filter by **right-clicking** on the "Audio" sector and **selecting** "Remove Selected".
 
-        !["clearfilter"](2cbc5465ca6f5af303d2290219476b44.png)
+!["clearfilter"](2cbc5465ca6f5af303d2290219476b44.png)
 
 11.**Click** on the "Save" icon at the top right of the screen to save your workbook.
 
