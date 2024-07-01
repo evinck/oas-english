@@ -329,6 +329,6 @@ We can start the exercise.
     - Use a subject area
     - create a new dataset, by selecting data from your local workstation or another data source.
 
-        !["workbookdatasourceoptions"](3f2b2f66349b878922e295f2f3500486.png)
+        ![](2024-07-01_22-18.png)
 
         Oracle Analytics Server provides flexible and agile data management capabilities allowing users to access a wide variety of data sources andbring them together.
