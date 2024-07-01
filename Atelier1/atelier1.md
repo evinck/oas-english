@@ -339,6 +339,10 @@ Clear your filter by **right-clicking** on the "Audio" sector and **selecting** 
 
 You have successfully created a workbook.
 
+12. Activate the "auto-save"
+
+![](2024-07-01_18-43.png)
+
 ## Bonus Exercise: Auto Insights
 
 So far we have created a workbook based on a defined and specific scenario. We asked questions and got answers.
