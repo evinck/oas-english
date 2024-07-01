@@ -186,7 +186,9 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
     !["selecttagcloudvisualization"](ee463f598ab632cc3b7ad6f82cab66bd.png)
 
-22. You should see a new visualization on the canvas. The visualization shows that **MicroPod** and **SoundX** **Nano** are the products with the highest number of outstanding supplier payments.
+    ![](2024-07-01_17-11.png)
+
+23. You should see a new visualization on the canvas. The visualization shows that **MicroPod** and **SoundX** **Nano** are the products with the highest number of outstanding supplier payments.
 
     Our suppliers may not be willing to ship ordered quantities if there are significant account delinquencies.
 
@@ -196,28 +198,28 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
     Let's forecast the profit ratio and revenue performance for the coming months. Oracle Analytics Server offers easy-to-use advanced analytical functions, such as trendline, forecast, clustering or outlier detection.
 
-23. Let's start by adding a new canvas. Think of an outline as an extra page in the workbook or an extra slide in a PowerPoint presentation.
+24. Let's start by adding a new canvas. Think of an outline as an extra page in the workbook or an extra slide in a PowerPoint presentation.
 
     **Click** on the "+" icon located at the bottom of the screen to create a new canvas. On the new canvas, **Click** on the inverted triangle to the right of its name. Select “Canvas Properties".
 
     !["addnewcanvas"](d35e842250a6d5be4375b33b1e33cdf4.png)
 
-24. **Click** “Auto Fit” and change it to “Freeform.” **Click** “Okay”.
-25. **Select** “Profit Ratio %”, “Revenue” and “Month”. Right-click and select “Pick Visualization”. **Select** "Combo."
+25. **Click** “Auto Fit” and change it to “Freeform.” **Click** “Okay”.
+26. **Select** “Profit Ratio %”, “Revenue” and “Month”. Right-click and select “Pick Visualization”. **Select** "Combo."
 
     !["createcombochartrevenueprofitratiomonth"](a971563f16ac757c8a9f13e922d35e8e.png)
 
     Note that in "freeform" mode, the entire canvas is not used automatically.
 
-26. From the grammar panel **Right click on** "Profit Ratio %" and select "Y2-Axis." Widen the visualization for a better view.
+27. From the grammar panel **Right click on** "Profit Ratio %" and select "Y2-Axis." Widen the visualization for a better view.
 
     !["profitratioy2axis"](440974b93b6fc508860107937eac4263.png)
 
-27. **Select** the “Analytics” option in the left navigation panel. Drag and drop “Trend Line” onto the visualization.
+28. **Select** the “Analytics” option in the left navigation panel. Drag and drop “Trend Line” onto the visualization.
 
     !["advanalyticsselecttrendline"](20b9f597b549a26c13ea622cdefa5d89.png)
 
-28. You have now created a management report that presents both the revenue and profitability ratio in % with their corresponding trend lines, all without coding.
+29. You have now created a management report that presents both the revenue and profitability ratio in % with their corresponding trend lines, all without coding.
 
     **Drag and drop** “Forecast” onto the visualization and you will see the predicted results for both metrics. This may take a few moments, please be patient.
 
@@ -227,7 +229,7 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
     !["advanalyticsproperties"](a79a577524a80e6886b55b8e6a886d36.png)
 
-29. It appears that we are on the right track and our forecasts are promising. Next, we'll provide a historical overview of revenue performance using a custom calendar heatmap visualization that can be found in the Oracle Analytics Extensions library.
+30. It appears that we are on the right track and our forecasts are promising. Next, we'll provide a historical overview of revenue performance using a custom calendar heatmap visualization that can be found in the Oracle Analytics Extensions library.
 
     **Note:** We have added custom visualization in the environment for you. If you would like to learn how to upload custom visualization types, please see the section at the end of this document.
 
@@ -235,7 +237,7 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
     !["createathirdcanvas"](b99393af0ae339a6369978145d646f38.png)
 
-30. Expand Time and Revenue Metrics, **Select** *Date* and *Revenue*. Then, **Right-Click** and select “Calendar Heatmap”.
+31. Expand Time and Revenue Metrics, **Select** *Date* and *Revenue*. Then, **Right-Click** and select “Calendar Heatmap”.
 
     !["selectcalendarheatmapvisual"](66d987667eaba5cfdddb2675dbaa4479.png)
 
