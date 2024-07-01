@@ -198,6 +198,10 @@ In this chapter, we will start with the basics of uploading a spreadsheet to Ora
 
         !["timedimensionhierarchy"](f100b479022bc9dc8549e0253fde5d3e.png)
 
+        Go back to the home page by clicking the "back arrow" on the top left - Choose the "Don't Save" option when asked about saving.
+
+        ![](2024-07-01_20-24.png)
+
 ## Self-service Data Modeling
 
 Oracle Analytics Server makes it quick and easy to create new datasets by adding tables from one or more connections to a dataset for analysis. This exercise explains how to gather data entities from one or more sources, select different tables, edit and join columns, and then preview the dataset.
