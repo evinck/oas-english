@@ -333,11 +333,11 @@ Clear your filter by **right-clicking** on the "Audio" sector and **selecting** 
 
 11.**Click** on the "Save" icon at the top right of the screen to save your workbook.
 
-    !["saveyourworkbook"](2d4dc53432b2c28770dd5bb1a060cf19.png)
+!["saveyourworkbook"](2d4dc53432b2c28770dd5bb1a060cf19.png)
 
-    !["myfoldersprofitratioanalysis"](6b83386547db6fedaad876c03237afcf.png)
+!["myfoldersprofitratioanalysis"](6b83386547db6fedaad876c03237afcf.png)
 
-    You have successfully created a workbook.
+You have successfully created a workbook.
 
 ## Bonus Exercise: Auto Insights
 
