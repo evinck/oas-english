@@ -52,12 +52,14 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
     A green line appears. It identifies the location of your visualization. You can drop the visualization to the left, right, top, or bottom of the previous visualization.
 
     !["draganddropelements"](025097f9079279dc59db51e39d238d0c.png)
+   !["draganddropelements"](Untitled.png)
+   
 
-8. Oracle Analytics Server provides adaptive graphing capabilities. Since we want to look at our metric over a period of time, Oracle Analytics has chosen to present the results as a line graph depicting the profit ratio month over month.
+9. Oracle Analytics Server provides adaptive graphing capabilities. Since we want to look at our metric over a period of time, Oracle Analytics has chosen to present the results as a line graph depicting the profit ratio month over month.
 
     Next, we want to look at the profit ratio for each product separately to get more details.
 
-    **Drag** "Product" to **Lattice Rows**. You should see an individual chart for each product, as shown in the image.
+    **Drag** "Product" to **Trellis Rows**. You should see an individual chart for each product, as shown in the image.
 
     !["trellischartproductbyrow"](e2c1f5a5462b7fe0ffc558fdfb94fc36.png)
 
@@ -67,13 +69,13 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
     Observe that “MicroPod” has declining profit ratios and “SoundX Nano” could also be improved. There may be several reasons for this.
 
-9. We continue our investigation by looking at product stock levels. JTC America uses a third-party system that captures data regarding inventory levels and product demand. I need this data to complete my analysis. Oracle Analytics allows you to quickly access inventory data and combine it with our current analysis, all within a single platform.
+10. We continue our investigation by looking at product stock levels. JTC America uses a third-party system that captures data regarding inventory levels and product demand. I need this data to complete my analysis. Oracle Analytics allows you to quickly access inventory data and combine it with our current analysis, all within a single platform.
 
     From the data elements panel, Click on "+" and "Add Data" to import all inventory data into your Workbook.
 
     ![](7e3120b3491e05e360a75755f1562ad5.png)
 
-10. **Click** on “Create Data Set” then “Drop data file here or click to browse”.
+11. **Click** on “Create Data Set” then “Drop data file here or click to browse”.
 
     !["locateinventory"](a8393febe16ce486a19274e2a588e2e9.png)
 
@@ -89,7 +91,7 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
     ![](54bda2c2774287a84054669804f848b0.png)
 
-11. Return to the "New Workbook" tab located above the Workbook area.
+12. Return to the "New Workbook" tab located above the Workbook area.
 
     Note that the “Inventory” Dataset is available to add to the Workbook.
 
@@ -132,7 +134,7 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
         !["dataelementspanelincludesinventory"](8dc9ea3a9766fd1242c576744217254b.png)
 
-12. Now that we have successfully joined our dataSo, let's continue our analysis. Hold **control and select** "Product -\> Product" in SampleApp and "Stock" and "Demand" in Inventory.
+13. Now that we have successfully joined our dataSo, let's continue our analysis. Hold **control and select** "Product -\> Product" in SampleApp and "Stock" and "Demand" in Inventory.
     1. **Click** **right** and **Select** “Pick Visualization”.
 
         !["createvisualizationwithblendeddataset"](c2799ceb79954be87461ba4acdc936b2.png)
@@ -141,7 +143,7 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
         !["selectbarchartvisualization"](bf21fbc5ddca065715ac03e6203b30d8.png)
 
-13. Notice grammar panel for bar visualization. By placing the "Stock" and "Demand" metrics respectively on the y-axis, the chart should look as shown in the image.
+14. Notice grammar panel for bar visualization. By placing the "Stock" and "Demand" metrics respectively on the y-axis, the chart should look as shown in the image.
 
     !["grammarpanelbarchart"](1d8db4e82c415137eac187363b43a5f1.png)
 
@@ -157,23 +159,23 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
     For other products, the relationship between inventory and demand is not much different. We are curious as to why stock levels for both products are lower than current demand.
 
-14. We decide to study debts and receivables. To continue our analysis, we import the outstanding vendor payments spreadsheet that we obtained from our financial system.
+15. We decide to study debts and receivables. To continue our analysis, we import the outstanding vendor payments spreadsheet that we obtained from our financial system.
 
     **Import** the *VendorPayments.xlsx* spreadsheet by repeating steps 9 through 12. You should now see the data set for Vendor Payments appear in the Data Elements panel of the screen. welcome to the workbook.
 
     !["dataelementspanelincludingvendorpaymentssource"](1d202b7220b27be7de76dbc0c4a6e251.png)
 
-15. Let's create a visualization to analyze products and supplier payments.
+16. Let's create a visualization to analyze products and supplier payments.
 
     Expand Products and VendorPayments, select *Product* and *OutstandingPayment*. Then, **Right** Click and **select** “Pick Visualization.”
 
     !["visualizationblendeddatasetsproductoutstandingvendorpayments"](3c1ed80e9fafcae6f7c4cfabda366886.png)
 
-16. Select “Tag Cloud”.
+17. Select “Tag Cloud”.
 
     !["selecttagcloudvisualization"](ee463f598ab632cc3b7ad6f82cab66bd.png)
 
-17. You should see a new visualization on the canvas. The visualization shows that **MicroPod** and **SoundX** **Nano** are the products with the highest number of outstanding supplier payments.
+18. You should see a new visualization on the canvas. The visualization shows that **MicroPod** and **SoundX** **Nano** are the products with the highest number of outstanding supplier payments.
 
     Our suppliers may not be willing to ship ordered quantities if there are significant account delinquencies.
 
@@ -183,28 +185,28 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
     Let's forecast the profit ratio and revenue performance for the coming months. Oracle Analytics Server offers easy-to-use advanced analytical functions, such as trendline, forecast, clustering or outlier detection.
 
-18. Let's start by adding a new canvas. Think of an outline as an extra page in the workbook or an extra slide in a PowerPoint presentation.
+19. Let's start by adding a new canvas. Think of an outline as an extra page in the workbook or an extra slide in a PowerPoint presentation.
 
     **Click** on the "+" icon located at the bottom of the screen to create a new canvas. On the new canvas, **Click** on the inverted triangle to the right of its name. Select “Canvas Properties".
 
     !["addnewcanvas"](d35e842250a6d5be4375b33b1e33cdf4.png)
 
-19. **Click** “Auto Fit” and change it to “Freeform.” **Click** “Okay”.
-20. **Select** “Profit Ratio %”, “Revenue” and “Month”. Right-click and select “Pick Visualization”. **Select** "Combo."
+20. **Click** “Auto Fit” and change it to “Freeform.” **Click** “Okay”.
+21. **Select** “Profit Ratio %”, “Revenue” and “Month”. Right-click and select “Pick Visualization”. **Select** "Combo."
 
     !["createcombochartrevenueprofitratiomonth"](a971563f16ac757c8a9f13e922d35e8e.png)
 
     Note that in "freeform" mode, the entire canvas is not used automatically.
 
-21. From the grammar panel **Right click on** "Profit Ratio %" and select "Y2-Axis." Widen the visualization for a better view.
+22. From the grammar panel **Right click on** "Profit Ratio %" and select "Y2-Axis." Widen the visualization for a better view.
 
     !["profitratioy2axis"](440974b93b6fc508860107937eac4263.png)
 
-22. **Select** the “Analytics” option in the left navigation panel. Drag and drop “Trend Line” onto the visualization.
+23. **Select** the “Analytics” option in the left navigation panel. Drag and drop “Trend Line” onto the visualization.
 
     !["advanalyticsselecttrendline"](20b9f597b549a26c13ea622cdefa5d89.png)
 
-23. You have now created a management report that presents both the revenue and profitability ratio in % with their corresponding trend lines, all without coding.
+24. You have now created a management report that presents both the revenue and profitability ratio in % with their corresponding trend lines, all without coding.
 
     **Drag and drop** “Forecast” onto the visualization and you will see the predicted results for both metrics. This may take a few moments, please be patient.
 
@@ -214,7 +216,7 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
     !["advanalyticsproperties"](a79a577524a80e6886b55b8e6a886d36.png)
 
-24. It appears that we are on the right track and our forecasts are promising. Next, we'll provide a historical overview of revenue performance using a custom calendar heatmap visualization that can be found in the Oracle Analytics Extensions library.
+25. It appears that we are on the right track and our forecasts are promising. Next, we'll provide a historical overview of revenue performance using a custom calendar heatmap visualization that can be found in the Oracle Analytics Extensions library.
 
     **Note:** We have added custom visualization in the environment for you. If you would like to learn how to upload custom visualization types, please see the section at the end of this document.
 
@@ -222,7 +224,7 @@ To start our analysis, we will create a workbook. Think of a workbook as a dashb
 
     !["createathirdcanvas"](b99393af0ae339a6369978145d646f38.png)
 
-25. Expand Time and Revenue Metrics, **Select** *Date* and *Revenue*. Then, **Right-Click** and select “Calendar Heatmap”.
+26. Expand Time and Revenue Metrics, **Select** *Date* and *Revenue*. Then, **Right-Click** and select “Calendar Heatmap”.
 
     !["selectcalendarheatmapvisual"](66d987667eaba5cfdddb2675dbaa4479.png)
 
