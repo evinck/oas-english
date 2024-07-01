@@ -133,9 +133,10 @@ In this chapter, we will start with the basics of uploading a spreadsheet to Ora
     - Let Merge Column with First Name
     - Change ‘With’ with Last Name
     - Leave the delimiter at Space ( )
-    - Once finished, Click on ‘Add Step’
   
       ![](2024-07-01_20-12.png)
+
+    - Once finished, Click on ‘Add Step’
 
         **Right-click** on First Name and Last Name and select ‘Hide’
 
