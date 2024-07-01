@@ -321,7 +321,7 @@ We can start the exercise.
 
         You can add other data sources to your analysis. **Click** on the + to the right of the search box.
 
-        !["adddatasetinworkbook"](e7f3240fe13a0235b1d10cd973a0b913.png)
+        ![](2024-07-01_20-35.png)
 
         At this point you can:
 
