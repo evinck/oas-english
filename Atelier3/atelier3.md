@@ -217,7 +217,7 @@ Binary classification is a technique of classifying items in a given dataset int
 
     !["passwordprompt"](3f8f2c780901c99c91eb87360641b27a.png)
 
-16. Find and open the workbook titledé Employee Analysis. Here we have an existing workbook that profiles 470 employees within our organization. We will apply our new classification training model to this dataset that we imported with this workbook.
+16. Find and open the workbook titled "Employee Analysis". Here we have an existing workbook that profiles 470 employees within our organization. We will apply our new classification training model to this dataset that we imported with this workbook.
 
     !["employeeanalysisworkbook"](3d17081b40379b0e2cc5fb74c2e5fafb.png)
 
