@@ -48,7 +48,11 @@ Once you import your data into Oracle Analytics, you begin by profiling the data
 
     **Note**: These helpful recommendations represent a key differentiator for Oracle and are designed to improve end-user productivity while helping customers get more value from their data.
 
-5. Now let's create a workbook using the dataset we just improved by clicking on the "Create Workbook" button at the top right.
+5. Save the dataset
+
+   ![](2024-07-02_00-30.png)
+
+7. Now let's create a workbook using the dataset we just improved by clicking on the "Create Workbook" button at the top right.
 
     !["clickcreateworkbook"](471498d89a75bf7f11c5ea1d909c00b0.png)
 
@@ -60,7 +64,7 @@ Once you import your data into Oracle Analytics, you begin by profiling the data
 
     !["explainattritionafterrightclickingonthatattribute"](0e67700d0c3897e23eca82eb09b2525f.png)
 
-6. This operation generates an explanation window that provides information about attrition. This information is divided into 4 categories. The first category identifies the basic facts about our attrition attribute. In this case, it performs automatic aggregations on separate lines.
+8. This operation generates an explanation window that provides information about attrition. This information is divided into 4 categories. The first category identifies the basic facts about our attrition attribute. In this case, it performs automatic aggregations on separate lines.
 
     !["piechartshowingcountofemployeeswholeavethecompany"](caa41e1c0718f1efb9126cb63d438eac.png)
 
