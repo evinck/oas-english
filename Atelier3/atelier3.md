@@ -78,7 +78,7 @@ Once you import your data into Oracle Analytics, you begin by profiling the data
 
     Explain also generates segment insights, identifying similarities or grouping profile scenarios where attrition is more or less likely to be a yes or no.
 
-    ![](2024-07-02_00-30.png)
+    ![](2024-07-02_10-43.png)
 
     The fourth category of information illustrates attrition anomalies or perhaps unexpected items. The fault indicator indicates the combinisons of each distinct attrition value against all columns in the dataset, allowing outliers to be highlighted.
 
