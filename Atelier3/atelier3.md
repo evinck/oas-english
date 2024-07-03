@@ -346,7 +346,7 @@ For this exercise, we will reuse the connection created in exercise 2 of the pre
 
 12. Click the + sign to the right of the EMPLOYEE_DATA node we just added to the dataflow and choose Apply Model at the bottom of the elements presented.
 
-    !["plusiconandapplymodelicon"](b5a6d36e926c9e6a52166ccf0159ffba.png)
+    ![](2024-07-03_12-38.png)
 
 13. Select ATTRITION-MODEL-SVM that we saved in step 6 above, then click OK.
 
