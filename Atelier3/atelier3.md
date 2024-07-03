@@ -313,75 +313,78 @@ For this exercise, we will reuse the connection created in exercise 2 of the pre
     ![](85dbf1b46ccb63c709bde87817466106.png) ![](e4d02a98f5320b13b5a9342ca9b1731b.png)
 
 3. Change the Age and EmployeeNumber columns to attribute and save the dataset with the name EMLOYEE_DATA.
-4. Return to Home, and at the top right, click on the three vertical dots to open the drop-down menu, then select Register ML Model.
+
+    ![](2024-07-03_12-28.png)
+   
+5. Return to Home, and at the top right, click on the three vertical dots to open the drop-down menu, then select Register ML Model.
 
     !["registermlmodeloption"](a1452b933a84561f2426c3ad0a9a38d9.png)
 
-5. Select the orclpdb connection that was created at the beginning of the chapter.
+6. Select the orclpdb connection that was created at the beginning of the chapter.
 
     ![](efcbd5e83379cac703d0d828a1883e82.png)
 
-6. Now select “*ATTRITION-MODEL-SVM*” from the list of available ML models and click Register at the bottom of the page.
+7. Now select “*ATTRITION-MODEL-SVM*” from the list of available ML models and click Register at the bottom of the page.
 
     !["attritionmodelsvm"](9d9670c16bf172abe4b838b13cf04fbf.png)
 
-7. From the home page, click the hamburger button at the top left, select Machine Learning, and for the ATTRITION-MODEL-SVM model we just saved, select the Inspect option using the three vertical points that appear on the right side of the model.
+8. From the home page, click the hamburger button at the top left, select Machine Learning, and for the ATTRITION-MODEL-SVM model we just saved, select the Inspect option using the three vertical points that appear on the right side of the model.
 
     !["paneltoinspectattritionmodelsvm"](c50ed3ee9e0364a110671a305da302e7.png)
 
-8. Inspectr the saved model. Note that there is more metadata appearing on OML models hosted in the Oracle database than on native ML models hosted in Oracle Analytics Server. This shows that OML models are much more sophisticated. Browse the different tabs (General, Access, Details, Related). Notice that under Details - Exit Columns there is a Prediction and a PredictionProbability which will tell us who is likely to leave next. Likewise, the Related tab offers a series of underlying metadata stored in DM\$ views within the Oracle database, containing important details about how the model was trained, tested, and evaluated
+9. Inspectr the saved model. Note that there is more metadata appearing on OML models hosted in the Oracle database than on native ML models hosted in Oracle Analytics Server. This shows that OML models are much more sophisticated. Browse the different tabs (General, Access, Details, Related). Notice that under Details - Exit Columns there is a Prediction and a PredictionProbability which will tell us who is likely to leave next. Likewise, the Related tab offers a series of underlying metadata stored in DM\$ views within the Oracle database, containing important details about how the model was trained, tested, and evaluated
 
     !["relatedtabforinspectattritionmodelsvm"](2a889b76a7657b06e69265ec07b5635e.png)
 
-9. Our saved OML model is now ready to be called by Oracle Analytics Server to make predictions about which employees are likely to leave the organization. To call this saved OML model, click Create at the top right of the page, then choose Data Flow.
+10. Our saved OML model is now ready to be called by Oracle Analytics Server to make predictions about which employees are likely to leave the organization. To call this saved OML model, click Create at the top right of the page, then choose Data Flow.
 
     !["dataflowcreateicon"](846a94419fbf0ae31b138695f2d7a96a.png)
 
-10. The authoring data flow will ask you which dataset(s) you want to use. Type "EMP" in the search window, then select EMPLOYEE-DATA and Add to enter a dataset containing key information about the remaining employees still working for our organization.
+11. The authoring data flow will ask you which dataset(s) you want to use. Type "EMP" in the search window, then select EMPLOYEE-DATA and Add to enter a dataset containing key information about the remaining employees still working for our organization.
 
     !["edatatablefromoracledb"](f1eeef2e2bd9b4d8a5c8d707ba203170.png)
 
-11. Click the + sign to the right of the EMPLOYEE_DATA node we just added to the dataflow and choose Apply Model at the bottom of the elements presented.
+12. Click the + sign to the right of the EMPLOYEE_DATA node we just added to the dataflow and choose Apply Model at the bottom of the elements presented.
 
     !["plusiconandapplymodelicon"](b5a6d36e926c9e6a52166ccf0159ffba.png)
 
-12. Select ATTRITION-MODEL-SVM that we saved in step 6 above, then click OK.
+13. Select ATTRITION-MODEL-SVM that we saved in step 6 above, then click OK.
 
     ![](ff0e84cd6b1e2e8cd3f107a5e3e1a00b.png)
 
-13. Since a similar dataset was used to train and test our model, the Prediction and PredictionProbability outputs are automatically mapped to the input columns needed to create our predictions.
+14. Since a similar dataset was used to train and test our model, the Prediction and PredictionProbability outputs are automatically mapped to the input columns needed to create our predictions.
 
     !["applymodelconfigpanel"](e71139511f71e5df309961a3d395c385.png)
 
-14. Click the + sign to the right of the Apply Model node and choose Save Data
+15. Click the + sign to the right of the Apply Model node and choose Save Data
 
     !["plusiconandsavedataicon"](70817d0773a7d9de7518a3349dae7ea3.png)
 
-15. Save the new dataset in the orclpdb database with the name PRED_EMP_ATTRIT. Give this name also for the dataset.
+16. Save the new dataset in the orclpdb database with the name PRED_EMP_ATTRIT. Give this name also for the dataset.
 
     ![](c3106d3393513ac00c2004fb709671c6.png)
 
-16. Save your data flow naming it PRED-EMP-ATTRIT-OML then, using the arrow at the top right of the page, run the dataset to create the predictions.
+17. Save your data flow naming it PRED-EMP-ATTRIT-OML then, using the arrow at the top right of the page, run the dataset to create the predictions.
 
     !["savedataflowpanela"](d4fca3123709336fcee81ebf8eac1d4a.png)
 
-17. Once the model has been applied, exit the data flow you have just created.
-18. Using the hamburger icon at the top left of the page, open the DATA panel and enter EMP to see all datasets with "EMP" in their name. Click on the PRED-EMP-ATTRIT dataset to create a new workbook.
+18. Once the model has been applied, exit the data flow you have just created.
+19. Using the hamburger icon at the top left of the page, open the DATA panel and enter EMP to see all datasets with "EMP" in their name. Click on the PRED-EMP-ATTRIT dataset to create a new workbook.
 
     !["predempatrittable"](c449bef822e5725d5caee5de27c65970.png)
 
-19. Select all columns in the dataset, right-click and select Pick Visualization. Then choose the Table visualization to view the predictions.
+20. Select all columns in the dataset, right-click and select Pick Visualization. Then choose the Table visualization to view the predictions.
 
     !["columnselectionpanel"](05c2fc500fb71e30ee88a1fac80cbbc9.png)
 
-20. Using the drag and drop techniqueser, rearrange the columns in each row so that Prediction, PredictionProbability, and EmployeeNumber appear on the right side of the table. You can also move key attributes such as DEPARTMENT, JOBROLE, ... to the right side.
+21. Using the drag and drop techniqueser, rearrange the columns in each row so that Prediction, PredictionProbability, and EmployeeNumber appear on the right side of the table. You can also move key attributes such as DEPARTMENT, JOBROLE, ... to the right side.
 
     !["columnsrearrangedintable"](066cf1353d08cfec0dba7f9bb345bee0.png)
 
-21. Click the Prediction attribute and drag it to the Filters section at the top of the page, then filter only on employees whose prediction is Yes, meaning they are likely to leave. Then sort based on “PredictionProbability” from top to bottom to see which employees have the greatest risk of leaving.
+22. Click the Prediction attribute and drag it to the Filters section at the top of the page, then filter only on employees whose prediction is Yes, meaning they are likely to leave. Then sort based on “PredictionProbability” from top to bottom to see which employees have the greatest risk of leaving.
 
     !["tablefilteredandsorted"](344f45cd58121247f691fa19b052a148.png)
 
-22. Continue building visualizations that you think might help understand attrition predictions until you have an interesting canvas.
+23. Continue building visualizations that you think might help understand attrition predictions until you have an interesting canvas.
 
     !["finalcanvas"](64e8727d030ef431c49ea04138355511.png)
