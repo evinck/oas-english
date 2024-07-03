@@ -318,8 +318,8 @@ For this exercise, we will reuse the connection created in exercise 2 of the pre
    
 5. Return to Home, and at the top right, click on the three vertical dots to open the drop-down menu, then select Register ML Model.
 
-    !["registermlmodeloption"](a1452b933a84561f2426c3ad0a9a38d9.png)
-
+    ![](2024-07-03_12-33.png)
+ 
 6. Select the orclpdb connection that was created at the beginning of the chapter.
 
     ![](efcbd5e83379cac703d0d828a1883e82.png)
